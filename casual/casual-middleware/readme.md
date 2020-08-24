@@ -2,6 +2,16 @@
 
 *note*: a more automatic solution will follow, but this is to give a basic understanding of the process and it will work as a first manual solution
 
+## Prerequisites
+   Install, if not already done, python3-sphinx, python3-pip, recommonmark, sphinx_markdown_tables 
+   Example on ubuntu:
+   ```
+   prompt$ sudo apt install python3-sphinx
+   prompt$ sudo apt install python3-pip
+   prompt$ sudo pip3 install recommonmark
+   prompt$ sudo pip3 install sphinx_markdown_tables
+   ```
+
 ## Steps
 
 1. copy setup.env.template and change to relevant paths
@@ -12,17 +22,13 @@
    ```
    prompt$ source setup.env
    ```
-3. copy documentation configuration to source directory
-   ```
-   prompt$ cp conf.py $CASUAL_BUILD_HOME/.
-   ```
-4. generate html documentation
+3. generate html documentation
    ```
    make html
    ```
-5. package directory build in tarfile
+4. package directory build in tarfile
    ```
    tar cvf casual-middleware-documentation.tar build
    ```
-6. unpack it where ever needed
+5. unpack it where ever needed
 
